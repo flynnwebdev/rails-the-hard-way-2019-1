@@ -1,3 +1,12 @@
+<!--
+When this is rendered, an actual article (i.e. an instance of
+the Article model) is passed as the parameter 'article'
+Rails knows which view we were in when rendering this partial,
+so it knows how to construct the appropriate form tag based on
+whether we're in an edit view or a new view. All we have to do
+is give form_for the actual article. Rails can work out the rest
+based on naming conventions.
+-->
 <%= form_for(article) do |f| %>
     <% if article.errors.any? %>
     <ul class="errors">
