@@ -3,3 +3,9 @@
     <strong>Content: </strong>
     <%= @article.content %>
 </p>
+<p>
+    <%= link_to 'Edit', controller: 'articles', action: 'edit', id: @article.id %>
+</p>
+<p>
+    <%= link_to '<< Back', controller: 'articles', action: 'index' %>
+</p>
